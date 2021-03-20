@@ -1,31 +1,42 @@
 <template>
-  <div class="terminal">
-    <label for="prompt">root@bry:~$</label>
-    <span
-      contenteditable="true"
-      type="text"
-      name="terminal"
-      v-bind="terminalInput"
-      class="terminal-input"
-    >
-      &nbsp;
-    </span>
-    <span class="block-cursor">&nbsp;</span>
+  <div>
+    <div
+      ref="terminal"
+      class="terminal"
+    />
   </div>
 </template>
 
 <script>
-import { ref, watch } from 'vue'
+import { ref, onMounted, nextTick } from 'vue'
+import '../assets/jquery.console.js'
+import $ from 'jquery'
 
 export default {
   setup() {
-    const terminalInput = ref('')
-    watch(terminalInput, (newVal) => {
-      if (newVal === '') {
-        terminalInput.value = ' '
+    const terminal = ref(null)
+    const commandHandle = (line) => {
+      // eslint-disable-next-line
+      nextTick(() => { terminal.value.scrollTop = terminal.value.scrollHeight })
+
+      if (line === 'ls') {
+        return 'home about'
       }
+      return `Command '${line}' not found`
+    }
+    onMounted(() => {
+      $(terminal.value).console({
+        promptLabel: 'root@bry:~$ ',
+        promptHistory: true,
+        commandHandle,
+        cols: 5,
+        welcomeMessage: '> Use bash commands to navigate',
+      })
     })
+
+    const terminalInput = ref('')
     return {
+      terminal,
       terminalInput,
     }
   },
@@ -37,17 +48,11 @@ export default {
 
 .terminal {
   font-family: 'Source Code Pro', monospace;
+  font-size: $font-medium;
   background-color: black;
   color: $bry-andes;
-  border-radius: 3px;
-  overflow-x: hidden;
-  overflow-y: auto;
-}
-.terminal-input {
-  caret-color: transparent;
-  background-color: black;
-}
-.block-cursor {
-  background-color: $bry-andes;
+  border-radius: 5px;
+  overflow-y: scroll;
+  max-height: 200px;
 }
 </style>

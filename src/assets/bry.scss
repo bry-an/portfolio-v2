@@ -8,6 +8,11 @@ $font-medium: 1.456rem;
 $font-small: 1rem;
 
 
+span.jquery-console-cursor {
+    background:$bry-andes;
+    color:$bry-andes;
+    font-weight: bold;
+}
 h1 {
     font-size: 9.101vmin; 
 }
