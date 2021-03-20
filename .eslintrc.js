@@ -1,28 +1,48 @@
 module.exports = {
   root: true,
   env: {
-    node: true
+    browser: true,
+    es6: true,
+    node: true,
+    jest: true,
   },
-  'extends': [
-    'plugin:vue/vue3-essential',
-    'eslint:recommended'
+  extends: [
+    'prettier',
+    'plugin:vue/recommended',
+    'airbnb-base',
+    'plugin:vue-scoped-css/vue3-recommended',
   ],
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
   },
+  plugins: ['vue', 'prettier', 'jest'],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'vue/require-prop-types': 'error',
+    'vue/require-default-prop': 'error',
+    camelcase: 'warn',
+    'max-len': 'off',
+    'no-console': 'error',
+    'no-debugger': 'warn',
+    'no-param-reassign': 'off',
+    'no-shadow': 'off',
+    'no-underscore-dangle': 'off',
+    indent: ['error', 2],
+    'linebreak-style': ['error', 'unix'],
+    quotes: ['error', 'single'],
+    semi: ['error', 'never'],
+    'comma-dangle': ['error', 'always-multiline'],
+    'import/no-unresolved': 'off',
+    'import/prefer-default-export': 'off',
+    'import/no-cycle': ['error'],
+    'import/extensions': ['warn', 'ignorePackages'],
+    'import/no-extraneous-dependencies': 'off',
+    'arrow-parens': ['error', 'always'],
+    'func-names': ['error', 'never'],
+    'object-curly-newline': [
+      'error',
+      { ImportDeclaration: 'never', ExportDeclaration: 'never' },
+    ],
+    'vue-scoped-css/require-scoped': 'warn',
+    'vue-scoped-css/no-unused-selector': 'warn',
   },
-  overrides: [
-    {
-      files: [
-        '**/__tests__/*.{j,t}s?(x)',
-        '**/tests/unit/**/*.spec.{j,t}s?(x)'
-      ],
-      env: {
-        jest: true
-      }
-    }
-  ]
 }

@@ -1,0 +1,8 @@
+{
+  "template": {
+    "scope": "vue",
+    "prefix": "template",
+    "body": ["<template>", "\t${0}", "</template>"],
+    "description": "<template>"
+  }
+}
