@@ -40,6 +40,8 @@ export default {
   background-color: black;
   color: $bry-andes;
   border-radius: 3px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .terminal-input {
   caret-color: transparent;
