@@ -1,5 +1,5 @@
 <template>
-  <div id="wrapper">
+  <div class="wrapper">
     <Header />
     <router-view />
   </div>
@@ -21,7 +21,7 @@ export default {
 @import '@/assets/bry.scss';
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap');
 
-#wrapper {
+.wrapper {
   background-color: $bry-dark-sky;
   width: 100vw;
   height: 100vh;

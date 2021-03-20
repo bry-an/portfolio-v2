@@ -4,9 +4,8 @@
       I am a <span class="text-andes">JavaScript</span> engineer.
     </p>
     <p class="mt-16">
-        I have been writing frontend software in <span class="text-andes">Vue.js</span>
-        <span class="block my-3 indent"> and microservices with <span class="text-andes">Node.js</span></span>
-        <span class="block my-3 indent-2"> for several years.</span>
+      I write frontend software applications in <span class="text-andes">Vue.js</span>
+      <span class="block my-3 indent"> and microservices with <span class="text-andes">Node.js</span></span>
     </p>
   </div>
 </template>

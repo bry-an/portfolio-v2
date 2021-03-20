@@ -1,7 +1,21 @@
 <template>
-  <div class="header">
-    <h1>Bryan Yunis</h1>
-    <h3>Software Engineer</h3>
+  <div class="header flex justify-between items-baseline">
+    <div>
+      <div class="header-name tracking-wide">
+        Bryan Yunis
+      </div>
+      <div class="header-title">
+        > Software Engineer
+      </div>
+    </div>
+    <div class="flex justify-center items-end nav-box">
+      <div class="mr-16">
+        Home
+      </div>
+      <div class="ml-2">
+        About
+      </div>
+    </div>
   </div>
 </template>
 
@@ -18,14 +32,31 @@ export default {
   color: $bry-andes;
   width: 90%;
   margin: auto;
-    padding-top: 2rem;
-    h1 {
-        display: inline;
-        margin-right: 5rem;
-    }
-    h3 {
-        display: inline;
-        font-family: 'Source Code Pro';
-    }
+  padding-top: 2rem;
+  .header-name {
+    font-size: 9.101vmin;
+  }
+  .header-title {
+    font-family: 'Source Code Pro';
+    font-size: 5.625vmin;
+  }
+  .cursor {
+    display: inline-block;
+    animation: blinking 1s linear infinite;
+    color: transparent;
+    background-color: $bry-andes;
+  }
+  .nav-box {
+    font-family: 'Source Code Pro', monospace;
+    font-size: $font-large;
+  }
+}
+@keyframes blinking {
+  0% {
+    background-color: $bry-chalk;
+  }
+  100% {
+    background-color: $bry-andes;
+  }
 }
 </style>

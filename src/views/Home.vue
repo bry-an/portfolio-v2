@@ -1,18 +1,23 @@
 <template>
   <div class="home">
     <div class="intro-container">
-    <Intro />
+      <Intro />
+    </div>
+    <div>
+      <Terminal />
     </div>
   </div>
 </template>
 
 <script>
 import Intro from '../components/Intro.vue'
+import Terminal from '../components/Terminal.vue'
 
 export default {
   name: 'Home',
   components: {
     Intro,
+    Terminal,
   },
 }
 </script>
