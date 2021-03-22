@@ -3,21 +3,21 @@
     <div class="intro-container">
       <Intro />
     </div>
-    <div>
-      <Terminal />
+    <div class="philosophy-container">
+      <Philosophy />
     </div>
   </div>
 </template>
 
 <script>
 import Intro from '../components/Intro.vue'
-import Terminal from '../components/Terminal.vue'
+import Philosophy from '../components/Philosophy.vue'
 
 export default {
   name: 'Home',
   components: {
     Intro,
-    Terminal,
+    Philosophy,
   },
 }
 </script>
@@ -25,11 +25,14 @@ export default {
 @import '@/assets/bry.scss';
 
 .home {
-  width: 70%;
+  width: 80%;
   margin: 3rem auto;
   font-size: $font-large;
   .intro-container {
-    margin-top: 30vmin;
+    margin-top: 10vmin;
+  }
+  .philosophy-container {
+    margin-top: 20vmin;
   }
 }
 </style>

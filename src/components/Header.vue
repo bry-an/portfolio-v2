@@ -1,25 +1,32 @@
 <template>
-  <div class="header flex justify-between items-baseline">
-    <div>
-      <div class="header-name tracking-wide">
-        Bryan Yunis
+  <div>
+    <div class="header flex justify-between items-baseline">
+      <div>
+        <h1 class="tracking-wide inline">
+          Bryan Yunis
+        </h1>
+        <h3 class="header-title inline">
+          > Software Engineer
+        </h3>
       </div>
-      <div class="header-title">
-        > Software Engineer
+      <div class="flex justify-center items-baseline nav-box">
+        <span class="cursor-pointer mr-12">
+          Home
+        </span>
+        <span class="cursor-pointer mr-12">
+          Vision
+        </span>
+        <span class="cursor-pointer">
+          Projects
+        </span>
       </div>
     </div>
-    <div class="flex justify-center items-end nav-box">
-      <div class="mr-16">
-        Home
-      </div>
-      <div class="ml-2">
-        About
-      </div>
-    </div>
+    <hr>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'Header',
 }
@@ -32,31 +39,23 @@ export default {
   color: $bry-andes;
   width: 90%;
   margin: auto;
-  padding-top: 2rem;
-  .header-name {
-    font-size: 9.101vmin;
-  }
+  padding-top: 1rem;
   .header-title {
     font-family: 'Source Code Pro';
-    font-size: 5.625vmin;
-  }
-  .cursor {
-    display: inline-block;
-    animation: blinking 1s linear infinite;
-    color: transparent;
-    background-color: $bry-andes;
   }
   .nav-box {
     font-family: 'Source Code Pro', monospace;
     font-size: $font-large;
+    .nav-box-item {
+      &:hover {
+        font-weight: 700;
+      }
+    }
   }
 }
-@keyframes blinking {
-  0% {
-    background-color: $bry-chalk;
+  hr {
+    border-top: 1px solid $bry-andes;
+    width: 90%;
+    margin: auto;
   }
-  100% {
-    background-color: $bry-andes;
-  }
-}
 </style>

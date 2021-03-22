@@ -24,8 +24,8 @@ export default {
 .wrapper {
   background-color: $bry-dark-sky;
   width: 100vw;
-  height: 100vh;
   font-family: 'Source Sans Pro', sans-serif;
   color: $bry-chalk;
+  padding-bottom: 3rem;
 }
 </style>

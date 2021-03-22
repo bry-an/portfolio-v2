@@ -11,33 +11,36 @@
 import { ref, onMounted, nextTick } from 'vue'
 import '../assets/jquery.console.js'
 import $ from 'jquery'
+import { handleTerminalInput, currentRoute } from '../utils/terminal.js'
 
 export default {
   setup() {
+    const refreshKey = ref(1)
     const terminal = ref(null)
     const commandHandle = (line) => {
-      // eslint-disable-next-line
-      nextTick(() => { terminal.value.scrollTop = terminal.value.scrollHeight })
-
-      if (line === 'ls') {
-        return 'home about'
-      }
-      return `Command '${line}' not found`
+      nextTick(() => {
+        terminal.value.scrollTop = terminal.value.scrollHeight
+      })
+      return handleTerminalInput(line)
     }
-    onMounted(() => {
+    const resetConsole = () => {
       $(terminal.value).console({
-        promptLabel: 'root@bry:~$ ',
+        promptLabel: `root@bry:~/${currentRoute.value}$ `,
         promptHistory: true,
         commandHandle,
         cols: 5,
-        welcomeMessage: '> Use bash commands to navigate',
+        welcomeMessage: '> Type \'help\' for a list of commands ',
       })
+    }
+    onMounted(() => {
+      resetConsole()
     })
 
     const terminalInput = ref('')
     return {
       terminal,
       terminalInput,
+      refreshKey,
     }
   },
 }
@@ -48,11 +51,12 @@ export default {
 
 .terminal {
   font-family: 'Source Code Pro', monospace;
-  font-size: $font-medium;
+  font-size: $font-small;
   background-color: black;
   color: $bry-andes;
   border-radius: 5px;
   overflow-y: scroll;
-  max-height: 200px;
+  height: 200px;
+  padding: 1rem;
 }
 </style>
