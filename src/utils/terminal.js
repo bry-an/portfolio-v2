@@ -1,25 +1,36 @@
 import { ref } from 'vue'
 
-const currentRoute = ref('')
+const newTab = ref(null)
 
-function handleRedirect(route) {
-  return `redirecting to ${route}`
+function openResource(location) {
+  let responseText = 'Click the button below!'
+  switch (location[0]) {
+  case 'linkedin': newTab.value = 'http://www.linkedin.com/in/bryan-yunis'
+    break
+  case 'github': newTab.value = 'http://www.github.com/bry-an'
+    break
+  default: responseText = `Resource '${location[0]}' not found`
+  }
+  return responseText
 }
 
 function help(topic) {
-  if (!topic) return 'Available Commands:\n ls: Show available sections\n'
+  if (!topic) return 'Available Commands:\nshow [\'github\'] [\'linkedin\'] [\'resume\']: open resource\nskills: list skills\nabout: about this console'
   return `${topic} not a help item`
 }
-
+const skills = 'Javascript, HTML/CSS, Vue, Node, PHP, Docker, Webpack, TypeScript, Jest (testing), Git, Linux\ntype \'show resume\' for more'
+// const commandStack = []
 function handleTerminalInput(input) {
   const [command, ...rest] = input.split(' ')
-  if (command === 'cd') return handleRedirect(rest)
+  if (command === 'show') return openResource(rest)
   if (command === 'help') return help(rest.pop())
   if (command === 'ls') return 'home about'
-  if (command === 'sudo') return 'There are no super users!'
+  if (command === 'sudo') return 'You are already super duper!'
   if (command === 'chmod') return 'Very clever'
+  if (command === 'skills') return `A sampling: ${skills}`
   if (command === 'rm') return 'Everything here stays'
-  return `Command '${input.trim()}' not found`
+  if (command === 'about') return 'H/t Chris Done https://github.com/chrisdone/jquery-console'
+  return `Command '${input.trim().split(' ')[0]}' not found`
 }
 
-export { handleTerminalInput, currentRoute }
+export { handleTerminalInput, newTab }

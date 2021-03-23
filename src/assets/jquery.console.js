@@ -538,7 +538,7 @@ import $ from 'jquery';
           }
         } else if (typeof ret == "string") {
           commandResult(ret,"jquery-console-message-success");
-        } else if (typeof ret == 'object' && ret.length) {
+        } else if (typeof ret == 'object' && ret && ret.length) {
           commandResult(ret);
         } else if (extern.continuedPrompt) {
           commandResult();

@@ -15,7 +15,7 @@
       and fostering an environment conducive to <span class="text-andes">collaboration</span>,
     </p>
     <p class="my-1">
-      and approaching problems with an open mind and boundless <span class="text-andes">curiosity</span>
+      and eagerly approaching technical problems with an open mind and boundless <span class="text-andes">curiosity</span>
     </p>
   </div>
 </template>

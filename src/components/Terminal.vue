@@ -4,6 +4,14 @@
       ref="terminal"
       class="terminal"
     />
+    <div class="flex justify-center mt-4">
+      <button
+        :class="['terminal-button', {'visible': newTab, 'invisible': !newTab } ]"
+        @click="navigateToResource"
+      >
+        Take me there
+      </button>
+    </div>
   </div>
 </template>
 
@@ -11,25 +19,35 @@
 import { ref, onMounted, nextTick } from 'vue'
 import '../assets/jquery.console.js'
 import $ from 'jquery'
-import { handleTerminalInput, currentRoute } from '../utils/terminal.js'
+import { handleTerminalInput, newTab } from '../utils/terminal.js'
 
 export default {
   setup() {
-    const refreshKey = ref(1)
     const terminal = ref(null)
+    const terminalInstance = ref(null)
     const commandHandle = (line) => {
+      if (line === 'clear') {
+        terminalInstance.value.reset()
+        return null
+      }
       nextTick(() => {
         terminal.value.scrollTop = terminal.value.scrollHeight
       })
       return handleTerminalInput(line)
     }
+    const navigateToResource = () => {
+      window.open(newTab.value, '_blank')
+      newTab.value = null
+      terminalInstance.value.reset()
+    }
     const resetConsole = () => {
-      $(terminal.value).console({
-        promptLabel: `root@bry:~/${currentRoute.value}$ `,
+      terminalInstance.value = $(terminal.value).console({
+        promptLabel: 'root@bry:~/ ',
         promptHistory: true,
         commandHandle,
         cols: 5,
         welcomeMessage: '> Type \'help\' for a list of commands ',
+        fadeOnReset: false,
       })
     }
     onMounted(() => {
@@ -40,7 +58,8 @@ export default {
     return {
       terminal,
       terminalInput,
-      refreshKey,
+      navigateToResource,
+      newTab,
     }
   },
 }
@@ -58,5 +77,13 @@ export default {
   overflow-y: scroll;
   height: 200px;
   padding: 1rem;
+}
+.terminal-button {
+  font-size: $font-small;
+  background-color: black;
+  color: $bry-andes;
+  font-family: 'Source Code Pro', monospace;
+  border-radius: 5px;
+  padding: 5px;
 }
 </style>

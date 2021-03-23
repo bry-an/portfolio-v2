@@ -2,7 +2,7 @@
   <div class="flex intro">
     <div class="w-1/2 text-right">
       <p>
-        I am a <span class="text-andes">JavaScript</span> engineer.
+        I am a software engineer who does a lot of <span class="text-andes">JavaScript</span>
       </p>
       <p class="mt-4">
         I write frontend applications with <span class="text-andes">Vue.js</span>
@@ -13,7 +13,7 @@
       </p>
     </div>
     <div class="w-1/2 flex flex-col items-center ml-3">
-      <div class="w-2/3">
+      <div class="w-4/5">
         <Terminal />
       </div>
     </div>

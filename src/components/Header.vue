@@ -5,9 +5,9 @@
         <h1 class="tracking-wide inline">
           Bryan Yunis
         </h1>
-        <h3 class="header-title inline">
+        <span class="header-title inline">
           > Software Engineer
-        </h3>
+        </span>
       </div>
       <div class="flex justify-center items-baseline nav-box">
         <span class="cursor-pointer mr-12 nav-item">
@@ -42,11 +42,12 @@ export default {
   padding-top: 1rem;
   .header-title {
     font-family: 'Source Code Pro';
+    font-size: $font-large;
   }
   .nav-box {
     font-family: 'Source Code Pro', monospace;
     font-size: $font-large;
-    .nav-box-item {
+    .nav-item {
       &:hover {
         font-weight: 700;
       }
