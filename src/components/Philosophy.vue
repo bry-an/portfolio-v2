@@ -1,8 +1,9 @@
 <template>
-  <div class="philosophy">
-    <h2 class="section-title tracking-wide font-bold">
+  <div class="philosophy tracking-wide">
+    <h3 class="section-title tracking-wide font-bold">
       VISION
-    </h2>
+      <hr>
+    </h3>
     <p class="my-2">
       Being an effective software engineer is not about languages or frameworks.
     </p>
@@ -38,6 +39,11 @@ export default {
 .text-andes {
   color: $bry-andes;
   font-family: 'Source Code Pro', monospace;
+}
+
+hr {
+  border-top: 1px solid $bry-andes;
+  width: 70%;
 }
 
 </style>

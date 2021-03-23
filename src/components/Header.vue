@@ -10,13 +10,13 @@
         </h3>
       </div>
       <div class="flex justify-center items-baseline nav-box">
-        <span class="cursor-pointer mr-12">
+        <span class="cursor-pointer mr-12 nav-item">
           Home
         </span>
-        <span class="cursor-pointer mr-12">
+        <span class="cursor-pointer mr-12 nav-item">
           Vision
         </span>
-        <span class="cursor-pointer">
+        <span class="cursor-pointer nav-item">
           Projects
         </span>
       </div>
@@ -35,7 +35,7 @@ export default {
 @import '@/assets/bry.scss';
 
 .header {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
   color: $bry-andes;
   width: 90%;
   margin: auto;

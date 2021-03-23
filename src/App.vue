@@ -15,16 +15,16 @@ export default {
   },
 }
 </script>
-
 <style lang="scss">
 @import '@/assets/reset.scss';
 @import '@/assets/bry.scss';
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700&display=swap');
 
 .wrapper {
   background-color: $bry-dark-sky;
   width: 100vw;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
   color: $bry-chalk;
   padding-bottom: 3rem;
 }
