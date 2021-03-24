@@ -13,7 +13,7 @@
         class="text-andes"
         style="text-decoration:underline;"
         target="_blank"
-      >RE/MAX</a> that builds a large CRM platform. My immediate team works on a suite of products for building a custom email campaigns. Recent larger projects include:
+      >RE/MAX</a> that builds a large CRM platform. My immediate team works on a suite of products for building custom email campaigns. Recent larger projects include:
     </p>
     <p class="text-andes my-2">
       Headless CMS
@@ -22,7 +22,7 @@
       I led a project to build a headless CMS service with Node that generates HTML programmatically.
     </p>
     <p class="section">
-      It renders Vue components (i.e. emails), hydrated with dynamic data, and converts those components to email-ready HTML.
+      It renders Vue components (i.e. emails) hydrated with dynamic data, and converts those components to email-ready HTML.
     </p>
     <p class="section">
       The HTML is consumed by a range of clients in different contexts.

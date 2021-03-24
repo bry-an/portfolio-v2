@@ -12,6 +12,8 @@ function openResource(location) {
     break
   case 'resume': newTab.value = 'https://s3-us-west-2.amazonaws.com/bryanyunis.com/resume/bryan-yunis-resume.pdf'
     break
+  case 'grace': newTab.value = 'https://gracegude.com'
+    break
   default: responseText = `Resource '${location[0]}' not found`
   }
   return responseText
@@ -40,8 +42,11 @@ function handleTerminalInput(input) {
   if (command === 'sudo') return 'You are already super duper!'
   if (command === 'chmod') return 'Very clever'
   if (command === 'skills') return `A sampling: ${skills}`
-  if (command === 'rm') return 'Everything here stays'
+  if (command === 'rm' || command === 'mv') return 'Everything here stays here'
+  if (command === ':(){') return 'Hey that is mean and does not work here'
+  if (command === 'mkfs.ext4') return 'Why not do good things with your knowledge?'
   if (command === 'about') return 'H/t Chris Done https://github.com/chrisdone/jquery-console'
+  if (command === 'grace') return openResource(['grace'])
   return `Command '${input.trim().split(' ')[0]}' not found`
 }
 
