@@ -33,7 +33,12 @@ export default {
 @import '@/assets/bry.scss';
 
 .contact {
-  font-size: $font-schmedium;
+  @include sm {
+    font-size: $font-schmedium;
+    text-align: left;
+  }
+  font-size: $font-small;
+    text-align: center;
 }
 .section-title {
   color: $bry-andes;
@@ -47,6 +52,10 @@ export default {
 hr {
   border-top: 1px solid $bry-andes;
   width: 70%;
+  @include sm {
+    margin: 0;
+  }
+    margin: auto;
 }
 
 </style>

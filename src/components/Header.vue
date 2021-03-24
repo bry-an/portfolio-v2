@@ -1,29 +1,29 @@
 <template>
   <div class="header-container">
-    <div class="header flex flex-col xl:flex-row justify-center xl:justify-between items-baseline">
-      <div>
-        <h1 class="tracking-wide inline header-text">
+    <div class="header flex flex-col xl:flex-row justify-center xl:justify-between items-center xl:items-baseline">
+      <div class="flex flex-col sm:flex-row items-center sm:items-baseline">
+        <h1 class="tracking-wide inline header-name">
           Bryan Yunis
         </h1>
-        <span class="header-title inline">
-          > Software Engineer
+        <span class="header-title sm:inline block">
+          <span class="invisible sm:visible sm:ml-4">></span> Software Engineer
         </span>
       </div>
       <div class="flex justify-center items-baseline nav-box">
         <span
-          class="cursor-pointer mr-12 nav-item"
+          class="cursor-pointer mr-6 bxl:mr-12 nav-item"
           @click="scrollTo('home')"
         >
           Home
         </span>
         <span
-          class="cursor-pointer mr-12 nav-item"
+          class="cursor-pointer mr-6 xl:mr-12 nav-item"
           @click="scrollTo('vision')"
         >
           Vision
         </span>
         <span
-          class="cursor-pointer nav-item mr-12"
+          class="cursor-pointer nav-item mr-6 xl:mr-12"
           @click="scrollTo('projects')"
         >
           Projects
@@ -65,16 +65,29 @@ export default {
     color: $bry-andes;
     width: 90%;
     margin: auto;
-    .header-text {
+    .header-name {
       line-height: 9.5vmin;
+      font-size: $font-large;
+      @include md {
+        font-size: $font-h1;
+      }
     }
     .header-title {
       font-family: 'Source Code Pro';
-      font-size: $font-large;
+      font-size: $font-schmedium;
+      @include md {
+        font-size: $font-large;
+      }
     }
     .nav-box {
       font-family: 'Source Code Pro', monospace;
-      font-size: $font-large;
+      @include xl {
+        font-size: $font-large;
+      }
+      @include md {
+        font-size: $font-schmedium;
+      }
+      font-size: $font-small;
       .nav-item {
         &:hover {
           font-weight: 700;
