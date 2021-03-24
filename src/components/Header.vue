@@ -6,7 +6,7 @@
           Bryan Yunis
         </h1>
         <span class="header-title sm:inline block">
-          <span class="invisible sm:visible sm:ml-4">></span> Software Engineer
+          <span class="hidden sm:inline sm:ml-4">></span> Software Engineer
         </span>
       </div>
       <div class="flex justify-center items-baseline nav-box">
