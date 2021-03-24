@@ -1,5 +1,8 @@
 <template>
-  <div class="home">
+  <div
+    id="home"
+    class="home"
+  >
     <div class="intro-container">
       <Intro />
     </div>
@@ -9,6 +12,12 @@
     <div class="projects-container">
       <Projects />
     </div>
+    <div class="contact-container">
+      <Contact />
+    </div>
+    <div class="footer-container">
+      <Footer />
+    </div>
   </div>
 </template>
 
@@ -16,6 +25,8 @@
 import Intro from '../components/Intro.vue'
 import Philosophy from '../components/Philosophy.vue'
 import Projects from '../components/Projects.vue'
+import Contact from '../components/Contact.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
   name: 'Home',
@@ -23,6 +34,8 @@ export default {
     Intro,
     Philosophy,
     Projects,
+    Contact,
+    Footer,
   },
 }
 </script>
@@ -37,9 +50,15 @@ export default {
     margin-top: 10vmin;
   }
   .philosophy-container {
-    margin-top: 20vmin;
+    margin-top: 15vmin;
   }
   .projects-container {
+    margin-top: 10vmin;
+  }
+  .contact-container {
+    margin-top: 10vmin;
+  }
+  .footer-container {
     margin-top: 10vmin;
   }
 }

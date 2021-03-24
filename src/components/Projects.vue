@@ -1,5 +1,8 @@
 <template>
-  <div class="projects tracking-wide">
+  <div
+    id="projects"
+    class="projects tracking-wide"
+  >
     <h3 class="section-title font-bold">
       PROJECTS
       <hr>
@@ -24,11 +27,11 @@
       The HTML is consumed by a range of clients in different contexts.
     </p>
     <p class="text-andes">
-      Frontend testing initiative
+      Frontend testing strategy
     </p>
     <p class="mb-4 pl-4">
-      I am on a small team that created testing infrastructure for our engineers. This includes testing utilities and
-      extensive documentation. We also trained other frontend engineers to effectively test their code.
+      I am on a small team that created testing infrastructure and strategy for our engineers. This includes testing utilities and
+      extensive documentation. We trained other frontend engineers to effectively test their code.
     </p>
     <p class="mb-4 pl-4">
       I am part of a similar initiative to document our codebase. I am a strong believer in the benefits of automated testing and good documentation.

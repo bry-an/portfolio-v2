@@ -26,6 +26,6 @@ export default {
   width: 100vw;
   font-family: 'Red Hat Display', sans-serif;
   color: $bry-chalk;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 </style>

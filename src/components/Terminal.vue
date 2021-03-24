@@ -84,6 +84,7 @@ export default {
   color: $bry-andes;
   font-family: 'Source Code Pro', monospace;
   border-radius: 5px;
-  padding: 5px;
+  padding: 8px;
+  border: 1px solid $bry-andes;
 }
 </style>

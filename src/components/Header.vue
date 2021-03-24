@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <div class="header flex justify-between items-baseline">
+  <div class="header-container">
+    <div class="header flex flex-col xl:flex-row justify-center xl:justify-between items-baseline">
       <div>
-        <h1 class="tracking-wide inline">
+        <h1 class="tracking-wide inline header-text">
           Bryan Yunis
         </h1>
         <span class="header-title inline">
@@ -10,14 +10,29 @@
         </span>
       </div>
       <div class="flex justify-center items-baseline nav-box">
-        <span class="cursor-pointer mr-12 nav-item">
+        <span
+          class="cursor-pointer mr-12 nav-item"
+          @click="scrollTo('home')"
+        >
           Home
         </span>
-        <span class="cursor-pointer mr-12 nav-item">
+        <span
+          class="cursor-pointer mr-12 nav-item"
+          @click="scrollTo('vision')"
+        >
           Vision
         </span>
-        <span class="cursor-pointer nav-item">
+        <span
+          class="cursor-pointer nav-item mr-12"
+          @click="scrollTo('projects')"
+        >
           Projects
+        </span>
+        <span
+          class="cursor-pointer nav-item"
+          @click="scrollTo('contact')"
+        >
+          Contact
         </span>
       </div>
     </div>
@@ -29,34 +44,48 @@
 
 export default {
   name: 'Header',
+  methods: {
+    scrollTo(id) {
+      const yOffset = -90
+      const element = document.getElementById(id)
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
+      window.scrollTo({ top: id === 'home' ? 0 : y, behavior: 'smooth' })
+    },
+  },
 }
 </script>
 <style lang="scss" scoped>
 @import '@/assets/bry.scss';
-
-.header {
-  font-family: 'Red Hat Display', sans-serif;
-  color: $bry-andes;
-  width: 90%;
-  margin: auto;
-  padding-top: 1rem;
-  .header-title {
-    font-family: 'Source Code Pro';
-    font-size: $font-large;
-  }
-  .nav-box {
-    font-family: 'Source Code Pro', monospace;
-    font-size: $font-large;
-    .nav-item {
-      &:hover {
-        font-weight: 700;
+.header-container {
+  position: sticky;
+  top: 0;
+  background-color: $bry-dark-sky;
+  .header {
+    font-family: 'Red Hat Display', sans-serif;
+    color: $bry-andes;
+    width: 90%;
+    margin: auto;
+    .header-text {
+      line-height: 9.5vmin;
+    }
+    .header-title {
+      font-family: 'Source Code Pro';
+      font-size: $font-large;
+    }
+    .nav-box {
+      font-family: 'Source Code Pro', monospace;
+      font-size: $font-large;
+      .nav-item {
+        &:hover {
+          font-weight: 700;
+        }
       }
     }
   }
 }
-  hr {
-    border-top: 1px solid $bry-andes;
-    width: 90%;
-    margin: auto;
-  }
+hr {
+  border-top: 1px solid $bry-andes;
+  width: 90%;
+  margin: auto;
+}
 </style>

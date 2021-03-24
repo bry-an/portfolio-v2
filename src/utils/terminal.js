@@ -9,6 +9,8 @@ function openResource(location) {
     break
   case 'github': newTab.value = 'http://www.github.com/bry-an'
     break
+  case 'resume': newTab.value = 'https://s3-us-west-2.amazonaws.com/bryanyunis.com/resume/bryan-yunis-resume.pdf'
+    break
   default: responseText = `Resource '${location[0]}' not found`
   }
   return responseText

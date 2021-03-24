@@ -1,5 +1,8 @@
 <template>
-  <div class="philosophy tracking-wide">
+  <div
+    id="vision"
+    class="philosophy tracking-wide"
+  >
     <h3 class="section-title tracking-wide font-bold">
       VISION
       <hr>
