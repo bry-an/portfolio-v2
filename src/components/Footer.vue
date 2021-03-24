@@ -2,7 +2,7 @@
   <div
     class="footer tracking-wide flex justify-center items-end"
   >
-    <div class="md:mx-12 mx-4">
+    <div class="sm:mx-12 mx-2">
       <a
         href="http://www.linkedin.com/in/bryan-yunis"
         target="_blank"
@@ -14,10 +14,10 @@
         >
       </a>
     </div>
-    <div class="text-andes md:mx-12 mx-4">
+    <div class="text-andes sm:mx-12 mx-2">
       &#169; Bryan Yunis
     </div>
-    <div class="md:mx-12 mx-4">
+    <div class="sm:mx-12 mx-2">
       <a
         href="http://www.github.com/bry-an"
         target="_blank"
@@ -45,21 +45,15 @@ export default {
   @include lg {
       font-size: $font-large;
   }
-  @include md {
-    font-size: $font-schmedium;
-  }
-  font-size: $font-small;
+  // @include md {
+  //   font-size: $font-schmedium;
+  // }
+  font-size: $font-schmedium;
   padding-bottom: 0;
 }
 
 .logo {
-  @include sm {
-    width: 35px;
-  }
-  @include md {
-    width: 60px;
-  }
-  width: 25px;
+  width: 8vmin;
 }
 
 .text-andes {
