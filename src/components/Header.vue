@@ -11,7 +11,7 @@
       </div>
       <div class="flex justify-center items-baseline nav-box">
         <span
-          class="cursor-pointer mr-6 bxl:mr-12 nav-item"
+          class="cursor-pointer mr-6 xl:mr-12 nav-item"
           @click="scrollTo('home')"
         >
           Home
@@ -41,16 +41,14 @@
 </template>
 
 <script>
+import { scroll } from '../utils/sharedMethods.js'
 
 export default {
   name: 'Header',
-  methods: {
-    scrollTo(id) {
-      const yOffset = -90
-      const element = document.getElementById(id)
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset
-      window.scrollTo({ top: id === 'home' ? 0 : y, behavior: 'smooth' })
-    },
+  setup() {
+    return {
+      scroll,
+    }
   },
 }
 </script>

@@ -8,17 +8,19 @@
       <hr>
     </h3>
     <p class="mb-1 mt-6">
-      Full contact information can be found on my <a
+      Full contact information is on my <a
         href="https://s3-us-west-2.amazonaws.com/bryanyunis.com/resume/bryan-yunis-resume.pdf"
         class="text-andes"
         target="_blank"
-      >resume</a>
+        style="text-decoration:underline;"
+      >resume</a>.
     </p>
     <p class="my-2">
       Otherwise, please reach out on <a
         href="https://s3-us-west-2.amazonaws.com/bryanyunis.com/resume/bryan-yunis-resume.pdf"
         class="text-andes"
-      >LinkedIn</a>
+        style="text-decoration:underline;"
+      >LinkedIn</a>.
     </p>
   </div>
 </template>
