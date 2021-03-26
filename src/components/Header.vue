@@ -12,25 +12,25 @@
       <div class="flex justify-center items-baseline nav-box">
         <span
           class="cursor-pointer mr-6 xl:mr-12 nav-item"
-          @click="scrollTo('home')"
+          @click="scroll('home')"
         >
           Home
         </span>
         <span
           class="cursor-pointer mr-6 xl:mr-12 nav-item"
-          @click="scrollTo('vision')"
+          @click="scroll('vision')"
         >
           Vision
         </span>
         <span
           class="cursor-pointer nav-item mr-6 xl:mr-12"
-          @click="scrollTo('projects')"
+          @click="scroll('projects')"
         >
           Projects
         </span>
         <span
           class="cursor-pointer nav-item"
-          @click="scrollTo('contact')"
+          @click="scroll('contact')"
         >
           Contact
         </span>

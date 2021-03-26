@@ -53,7 +53,7 @@ export default {
 }
 
 .logo {
-  width: 8vmin;
+  width: 7vmin;
 }
 
 .text-andes {

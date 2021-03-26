@@ -8,7 +8,7 @@
       <hr>
     </h3>
     <p class="my-3">
-      I work for a team at <a
+      I work on a team at <a
         href="https://www.remax.com/"
         class="text-andes"
         style="text-decoration:underline;"
@@ -19,7 +19,7 @@
       Headless CMS
     </p>
     <p class="section">
-      I led a project to build a headless CMS service with Node that generates HTML programmatically.
+      I led a project to build a headless CMS service with Node/TypeScript that generates HTML programmatically.
     </p>
     <p class="section">
       It renders Vue components (i.e. emails) hydrated with dynamic data, and converts those components to email-ready HTML.
@@ -35,11 +35,11 @@
       extensive documentation. We trained other frontend engineers to effectively test their code.
     </p>
     <p class="section">
-      I am part of another initiative to document our codebase. Testing and documentation are integral parts of my developement workflow.
+      I am part of another initiative to document our codebase. Testing and documentation are integral parts of my development workflow.
     </p>
     <p class="section mt-6">
-      My other projects have a few things in common: they were built in a collaborative, agile development cycle;
-      utilized emerging trends in web application development; and required comfort traversing the web stack.
+      My other projects have a few things in common: they were built in a collaborative, development cycle;
+      utilized emerging trends in web application engineering; and required comfort traversing the web stack.
     </p>
     <p class="text-andes mt-6 mb-2">
       Dev Community
