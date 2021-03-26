@@ -57,10 +57,10 @@ export default {
 .header-container {
   position: sticky;
   top: 0;
-  background-color: $bry-dark-sky;
+    background-color: $bry-dark-sky;
   .header {
     font-family: 'Red Hat Display', sans-serif;
-    color: $bry-andes;
+    color: $bry-chalk;
     width: 90%;
     margin: auto;
     .header-name {
