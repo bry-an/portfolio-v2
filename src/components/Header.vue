@@ -13,30 +13,30 @@
         </span>
       </div>
       <div class="flex justify-center items-baseline nav-box">
-        <span
+        <button
           :class="['cursor-pointer mr-6 xl:mr-12 nav-item', {'text-andes': scrollPos < navItemPositions.vision }]"
           @click="scroll('home')"
         >
           Home
-        </span>
-        <span
+        </button>
+        <button
           :class="['cursor-pointer mr-6 xl:mr-12 nav-item', {'text-andes': scrollPos > navItemPositions.vision && scrollPos < navItemPositions.projects }]"
           @click="scroll('vision')"
         >
           Vision
-        </span>
-        <span
+        </button>
+        <button
           :class="['cursor-pointer mr-6 xl:mr-12 nav-item', {'text-andes': scrollPos > navItemPositions.projects && scrollPos < navItemPositions.contact }]"
           @click="scroll('projects')"
         >
           Projects
-        </span>
-        <span
+        </button>
+        <button
           :class="['cursor-pointer nav-item', {'text-andes': scrollPos === navItemPositions.contact }]"
           @click="scroll('contact')"
         >
           Contact
-        </span>
+        </button>
       </div>
     </div>
     <hr>
@@ -73,6 +73,9 @@ export default {
   top: 0;
     background-color: $bry-dark-sky;
   .header {
+    button {
+      outline: none;
+    }
     font-family: 'Red Hat Display', sans-serif;
     color: $bry-chalk;
     width: 90%;

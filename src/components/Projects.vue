@@ -16,7 +16,7 @@
       >RE/MAX</a> that builds a large CRM platform. My immediate team works on a suite of products for building custom email campaigns. Recent larger projects include:
     </p>
     <p class="text-andes my-2">
-      Headless CMS
+      Custom Headless CMS
     </p>
     <p class="section">
       I led a project to build a headless CMS service with Node/TypeScript that generates HTML programmatically.
@@ -38,7 +38,7 @@
       I am part of another initiative to document our codebase. Testing and documentation are integral parts of my development workflow.
     </p>
     <p class="section mt-6">
-      My other projects have a few things in common: they were built in a collaborative, development cycle;
+      My other projects have a few things in common: they were built in a collaborative, agile development cycle;
       utilized emerging trends in web application engineering; and required comfort traversing the web stack.
     </p>
     <p class="text-andes mt-6 mb-2">

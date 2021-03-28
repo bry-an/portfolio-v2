@@ -29,6 +29,7 @@ function scrollTo(id) {
 
 function help(topic) {
   if (!topic) return 'Available Commands:\nshow [\'github\'] [\'linkedin\'] [\'resume\']: open resource\nskills: list skills\nls | cd: navigate\nabout: about this console'
+  if (topic === 'show') return 'show [\'github\'] [\'linkedin\'] [\'resume\']: open resource'
   return `${topic} not a help item`
 }
 const skills = 'Javascript, HTML/CSS, Vue, Node, PHP, Docker, Webpack, TypeScript, Jest (testing), Git, Linux\ntype \'show resume\' for more'

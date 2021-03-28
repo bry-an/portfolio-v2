@@ -16,7 +16,7 @@
       >resume</a>.
     </p>
     <p class="my-2">
-      Otherwise, please reach out on <a
+      Or find me on <a
         href="https://s3-us-west-2.amazonaws.com/bryanyunis.com/resume/bryan-yunis-resume.pdf"
         class="text-andes"
         style="text-decoration:underline;"
