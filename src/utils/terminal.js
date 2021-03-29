@@ -14,6 +14,8 @@ function openResource(location) {
     break
   case 'grace': newTab.value = 'https://gracegude.com'
     break
+  case 'maks': newTab.value = 'https://mi544.dev/'
+    break
   default: responseText = `Resource '${location[0]}' not found`
   }
   return responseText
@@ -48,6 +50,7 @@ function handleTerminalInput(input) {
   if (command === 'mkfs.ext4') return 'Why not do good things with your knowledge?'
   if (command === 'about') return 'H/t Chris Done https://github.com/chrisdone/jquery-console'
   if (command === 'grace') return openResource(['grace'])
+  if (command === 'maks') return openResource(['maks'])
   return `Command '${input.trim().split(' ')[0]}' not found`
 }
 

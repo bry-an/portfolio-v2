@@ -8,7 +8,7 @@
       <hr>
     </h3>
     <p class="my-2">
-      Being an effective software engineer is not about languages or frameworks.
+      Being an effective software engineer is not about which language or what framework is used.
     </p>
     <p class="mb-1 mt-6">
       It means writing <span class="text-andes">well-documented</span>, <span class="text-andes">tested</span> code,

@@ -13,10 +13,7 @@
         class="text-andes"
         target="_blank"
         style="text-decoration:underline;"
-      >resume</a>.
-    </p>
-    <p class="my-2">
-      Or find me on <a
+      >resume</a> or find me on <a
         href="https://s3-us-west-2.amazonaws.com/bryanyunis.com/resume/bryan-yunis-resume.pdf"
         class="text-andes"
         style="text-decoration:underline;"

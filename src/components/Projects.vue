@@ -13,7 +13,7 @@
         class="text-andes"
         style="text-decoration:underline;"
         target="_blank"
-      >RE/MAX</a> that builds a large CRM platform. My immediate team works on a suite of products for building custom email campaigns. Recent larger projects include:
+      >RE/MAX</a> that builds a large CRM platform with Vue.js. My immediate team works on a suite of products for users to build custom email campaigns. Recent larger projects include:
     </p>
     <p class="text-andes my-2">
       Custom Headless CMS
@@ -37,7 +37,22 @@
     <p class="section">
       I am part of another initiative to document our codebase. Testing and documentation are integral parts of my development workflow.
     </p>
-    <p class="section mt-6">
+    <p class="mt-8 mb-3">
+      At OppenheimerFunds (now <a
+        href="https://www.invesco.com/"
+        class="text-andes"
+        style="text-decoration:underline;"
+        target="_blank"
+      >Invesco</a>), I worked on a team that built internal HR applications.
+    </p>
+    <p class="text-andes my-2">
+      HR Provisioning Application
+    </p>
+    <p class="section">
+      I helped develop and maintain a new HR dashboard that connected three line-of-business applications to streamline the employee onboarding process, a workflow that traditionally involved interacting individually with distinct teams.
+      This suite transformed the process from days to at little as a few minutes.
+    </p>
+    <p class="mt-8">
       My other projects have a few things in common: they were built in a collaborative, agile development cycle;
       utilized emerging trends in web application engineering; and required comfort traversing the web stack.
     </p>
@@ -45,7 +60,7 @@
       Dev Community
     </p>
     <p class="section">
-      I created and lead a <a
+      I co-created and lead a <a
         href="https://www.meetup.com/Bootcampers-Collective/"
         class="text-andes"
         target="_blank"
