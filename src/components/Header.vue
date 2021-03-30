@@ -20,19 +20,19 @@
           Home
         </button>
         <button
-          :class="['cursor-pointer mr-6 xl:mr-12 nav-item', {'text-andes': scrollPos > navItemPositions.vision && scrollPos < navItemPositions.projects }]"
+          :class="['cursor-pointer mr-6 xl:mr-12 nav-item', {'text-andes': scrollPos >= navItemPositions.vision && scrollPos < navItemPositions.projects }]"
           @click="scroll('vision')"
         >
           Vision
         </button>
         <button
-          :class="['cursor-pointer mr-6 xl:mr-12 nav-item', {'text-andes': scrollPos > navItemPositions.projects && scrollPos < navItemPositions.contact }]"
+          :class="['cursor-pointer mr-6 xl:mr-12 nav-item', {'text-andes': scrollPos >= navItemPositions.projects && scrollPos < navItemPositions.contact }]"
           @click="scroll('projects')"
         >
           Projects
         </button>
         <button
-          :class="['cursor-pointer nav-item', {'text-andes': scrollPos === navItemPositions.contact }]"
+          :class="['cursor-pointer nav-item', {'text-andes': scrollPos >= navItemPositions.contact }]"
           @click="scroll('contact')"
         >
           Contact

@@ -8,7 +8,7 @@ function getYPositionOfElement(id) {
   if (id === 'contact') {
     return document.body.offsetHeight - window.innerHeight // bottom
   }
-  return Math.ceil(element.getBoundingClientRect().top + window.pageYoffset + yOffset)
+  return Math.ceil(element.getBoundingClientRect().top + window.pageYOffset + yOffset)
 }
 
 function getNavItemPositions() {
@@ -23,7 +23,7 @@ function scroll(id) {
 
 function scrollListener(ref) {
   document.addEventListener('scroll', () => {
-    ref.value = window.scrollY
+    ref.value = window.scrollY + 90
   })
 }
 export { scrollListener, scroll, getNavItemPositions, navItemPositions }
