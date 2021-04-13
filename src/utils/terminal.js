@@ -6,17 +6,23 @@ const newTab = ref(null)
 function openResource(location) {
   let responseText = 'Click the button below!'
   switch (location[0]) {
-  case 'linkedin': newTab.value = 'http://www.linkedin.com/in/bryan-yunis'
+  case 'linkedin':
+    newTab.value = 'http://www.linkedin.com/in/bryan-yunis'
     break
-  case 'github': newTab.value = 'http://www.github.com/bry-an'
+  case 'github':
+    newTab.value = 'http://www.github.com/bry-an'
     break
-  case 'resume': newTab.value = 'https://s3-us-west-2.amazonaws.com/bryanyunis.com/resume/bryan-yunis-resume.pdf'
+  case 'resume':
+    newTab.value = 'https://s3-us-west-2.amazonaws.com/bryanyunis.com/resume/bryan-yunis-resume.pdf'
     break
-  case 'grace': newTab.value = 'https://gracegude.com'
+  case 'grace':
+    newTab.value = 'https://gracegude.com'
     break
-  case 'maks': newTab.value = 'https://mi544.dev/'
+  case 'maks':
+    newTab.value = 'https://mi544.dev/'
     break
-  default: responseText = `Resource '${location[0]}' not found`
+  default:
+    responseText = `Resource '${location[0]}' not found`
   }
   return responseText
 }
@@ -30,11 +36,13 @@ function scrollTo(id) {
 }
 
 function help(topic) {
-  if (!topic) return 'Available Commands:\nshow [\'github\'] [\'linkedin\'] [\'resume\']: open resource\nskills: list skills\nls | cd: navigate\nabout: about this console'
+  if (!topic) {
+    return 'Available Commands:\nshow [\'github\'] [\'linkedin\'] [\'resume\']: open resource\nskills: list skills\nls | cd: navigate\nabout: about this console'
+  }
   if (topic === 'show') return 'show [\'github\'] [\'linkedin\'] [\'resume\']: open resource'
   return `${topic} not a help item`
 }
-const skills = 'Javascript, HTML/CSS, Vue, Node, PHP, Docker, Webpack, TypeScript, Jest (testing), Git, Linux\ntype \'show resume\' for more'
+const skills = 'Javascript, HTML/CSS, Vue, React, Node, PHP, Docker, Webpack, TypeScript, Jest (testing), Git, Linux\ntype \'show resume\' for more'
 // const commandStack = []
 function handleTerminalInput(input) {
   const [command, ...rest] = input.split(' ')
