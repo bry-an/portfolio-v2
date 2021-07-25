@@ -1,3 +1,3 @@
 # Bryan Yunis Personal Website
 
-http://bryanyunis.com
+https://bryanyunis.com
