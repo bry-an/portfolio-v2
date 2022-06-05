@@ -12,12 +12,6 @@ function openResource(location) {
   case 'github':
     newTab.value = 'http://www.github.com/bry-an'
     break
-  case 'resume':
-    newTab.value = 'https://s3-us-west-2.amazonaws.com/bryanyunis.com/resume/bryan-yunis-resume.pdf'
-    break
-  case 'grace':
-    newTab.value = 'https://gracegude.com'
-    break
   case 'maks':
     newTab.value = 'https://mi544.dev/'
     break
@@ -37,13 +31,12 @@ function scrollTo(id) {
 
 function help(topic) {
   if (!topic) {
-    return 'Available Commands:\nshow [\'github\'] [\'linkedin\'] [\'resume\']: open resource\nskills: list skills\nls | cd: navigate\nabout: about this console'
+    return 'Available Commands:\nshow [\'github\'] [\'linkedin\']: open resource\nskills: list skills\nls | cd: navigate\nabout: about this console'
   }
-  if (topic === 'show') return 'show [\'github\'] [\'linkedin\'] [\'resume\']: open resource'
+  if (topic === 'show') return 'show [\'github\'] [\'linkedin\']: open resource'
   return `${topic} not a help item`
 }
-const skills = 'Javascript, HTML/CSS, Vue, React, Node, PHP, Docker, Webpack, TypeScript, Jest (testing), Git, Linux\ntype \'show resume\' for more'
-// const commandStack = []
+const skills = 'Javascript, Clojure, PHP, HTML/CSS, Vue, Svelte, Node, AWS, Docker, web bundlers, Jest (testing), Git, Linux'
 function handleTerminalInput(input) {
   const [command, ...rest] = input.split(' ')
   if (command === 'show') return openResource(rest)
@@ -57,7 +50,6 @@ function handleTerminalInput(input) {
   if (command === ':(){') return 'Hey that is mean and does not work here'
   if (command === 'mkfs.ext4') return 'Why not do good things with your knowledge?'
   if (command === 'about') return 'H/t Chris Done https://github.com/chrisdone/jquery-console'
-  if (command === 'grace') return openResource(['grace'])
   if (command === 'maks') return openResource(['maks'])
   return `Command '${input.trim().split(' ')[0]}' not found`
 }

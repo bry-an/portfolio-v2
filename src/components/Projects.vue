@@ -5,62 +5,93 @@
   >
     <h3 class="section-title font-bold">
       PROJECTS
-      <hr>
     </h3>
+    <p class="mt-8">
+      My projects all utilize emerging trends in web application engineering.
+    </p>
     <p class="my-3">
-      I work on a team at <a
+      <span class="font-bold">I'm currently a software engineer</span> on a team at <a
+        href="https://www.gateless.com/"
+        class="text-andes"
+        style="text-decoration:underline;"
+        target="_blank"
+      >gateless</a>, where we're revolutionizing the mortgage loan industry through intelligent automation.
+    </p>
+    <div class="card">
+      <p class="text-andes my-2">
+        SmartUnderwrite Portal
+      </p>
+      <p class="section">
+        I help architect, develop from the ground up, deploy, and maintain a modern frontend with Svelte.js,
+        using the latest web standards and technologies to create performant, intuitive user interfaces.
+      </p>
+      <p class="text-andes my-2">
+        SmartUnderwrite
+      </p>
+      <p class="section">
+        I contribute to a large-scale Clojure distributed expert system that creates mortgage loan projections against a rules namespace.
+      </p>
+      <p class="text-andes my-2">
+        Tested and reusable: engineered to last
+      </p>
+      <p class="section">
+        I designed, built, and maintain unit and integration testing suites for our platform, as well as help maintain our UI library.
+      </p>
+    </div>
+
+    <p class="mb-3 mt-12">
+      <span class="font-bold">At <a
         href="https://www.remax.com/"
         class="text-andes"
         style="text-decoration:underline;"
         target="_blank"
-      >RE/MAX</a> that builds a large CRM platform with Vue.js. My immediate team works on a suite of products for users to build custom email campaigns. Recent larger projects include:
+      >RE/MAX</a></span>, I worked on a team that built a large CRM platform with Vue.js. We worked on a suite of products for users to build custom email campaigns.
     </p>
-    <p class="text-andes my-2">
-      Custom Headless CMS
-    </p>
-    <p class="section">
-      I led a project to build a headless CMS service with Node/TypeScript that generates HTML programmatically.
-    </p>
-    <p class="section">
-      It renders Vue components (i.e. emails) hydrated with dynamic data, and converts those components to email-ready HTML.
-    </p>
-    <p class="section">
-      The HTML is consumed by a range of clients in different contexts.
-    </p>
-    <p class="text-andes my-2">
-      Frontend testing strategy
-    </p>
-    <p class="section">
-      I am on a small team that created testing infrastructure and strategy for our engineers, including testing utilities and
-      extensive documentation. We trained other frontend engineers to effectively test their code.
-    </p>
-    <p class="section">
-      I am part of another initiative to document our codebase. Testing and documentation are integral parts of my development workflow.
-    </p>
-    <p class="mt-8 mb-3">
-      At OppenheimerFunds (now <a
-        href="https://www.invesco.com/"
+    <div class="card">
+      <p class="text-andes my-2">
+        Custom Headless CMS
+      </p>
+      <p class="section">
+        I led a project to build a headless CMS service with Node/TypeScript that generates HTML programmatically.
+      </p>
+      <p class="section">
+        It renders Vue components (i.e. emails) hydrated with dynamic data, and converts those components to email-ready HTML.
+      </p>
+      <p class="section">
+        The HTML is consumed by a range of clients in different contexts.
+      </p>
+      <p class="text-andes my-2">
+        Frontend testing strategy
+      </p>
+      <p class="section">
+        I was on a small team that created testing infrastructure and strategy for our engineers, including testing utilities and
+        extensive documentation. We trained other frontend engineers to effectively test their code.
+      </p>
+      <p class="section">
+        I was part of another initiative to document our codebase. Testing and documentation are integral parts of my development workflow.
+      </p>
+    </div>
+    <p class="mt-14 mb-3">
+      <span class="font-bold">At OppenheimerFunds</span> (now <a
+        href="https://www.invesco.com/corporate/en/home.html"
         class="text-andes"
         style="text-decoration:underline;"
         target="_blank"
       >Invesco</a>), I worked on a team that built internal HR applications.
     </p>
-    <p class="text-andes my-2">
-      HR Provisioning Application
-    </p>
-    <p class="section">
-      I helped develop and maintain a new HR dashboard that connected three line-of-business applications to streamline the employee onboarding process, a workflow that traditionally involved interacting individually with distinct teams.
-      This suite transformed the process from days to at little as a few minutes.
-    </p>
-    <p class="mt-8">
-      My other projects have a few things in common: they were built in a collaborative, agile development cycle;
-      utilized emerging trends in web application engineering; and required comfort traversing the web stack.
-    </p>
-    <p class="text-andes mt-6 mb-2">
-      Dev Community
-    </p>
-    <p class="section">
-      I co-created and lead a <a
+    <div class="card">
+      <p class="text-andes my-2">
+        HR Provisioning Application
+      </p>
+      <p class="section">
+        I helped develop and maintain a new HR dashboard that connected three line-of-business applications to streamline the employee onboarding process, a workflow that traditionally involved interacting individually with distinct teams.
+      </p>
+      <p class="section">
+        This suite transformed the onboarding process from days to at little as a few minutes.
+      </p>
+    </div>
+    <p class="mt-14 mb-3">
+      <span class="font-bold">I co-created and lead</span> a <a
         href="https://www.meetup.com/Bootcampers-Collective/"
         class="text-andes"
         target="_blank"
@@ -80,13 +111,26 @@ export default {
 <style lang="scss" scoped>
 @import '@/assets/bry.scss';
 
+.card {
+    border-bottom: 1px solid white;
+    padding: 0;
+    margin: 0;
+    background: inherit;
+
+    @include sm {
+        border: 1px solid white;
+        border-radius: 4px;
+        padding: 1rem;
+        margin: 1rem;
+        background: #222043;
+    }
+}
+
 .projects {
   @include sm {
     font-size: $font-schmedium;
-    text-align: left;
   }
   font-size: $font-small;
-  text-align: center;
   .section {
     @apply mb-4;
     @include sm {

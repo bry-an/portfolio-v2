@@ -5,13 +5,9 @@
   >
     <h3 class="section-title tracking-wide font-bold">
       VISION
-      <hr>
     </h3>
-    <p class="my-2">
-      Being an effective software engineer is not about which language or what framework is used.
-    </p>
     <p class="mb-1 mt-6">
-      It means writing <span class="text-andes">well-documented</span>, <span class="text-andes">tested</span> code,
+      Being an effective software engineer means writing <span class="text-andes">well-documented</span>, <span class="text-andes">tested</span> code,
     </p>
     <p class="my-1">
       <span class="text-andes">communicating</span> clearly with colleagues
@@ -35,10 +31,8 @@ export default {
 .philosophy {
   @include sm {
     font-size: $font-schmedium;
-    text-align: left;
   }
   font-size: $font-small;
-    text-align: center;
 }
 .section-title {
   color: $bry-andes;

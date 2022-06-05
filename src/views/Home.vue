@@ -50,7 +50,7 @@ export default {
     margin-top: 10vmin;
   }
   .philosophy-container {
-    margin-top: 15vmin;
+    margin-top: 10vmin;
   }
   .projects-container {
     margin-top: 10vmin;

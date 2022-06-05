@@ -1,12 +1,14 @@
 <template>
   <div class="flex intro">
-    <div class="sm:w-1/2 w-full sm:text-right text-center">
+    <div class="sm:w-1/2 w-full sm:text-right text-left">
       <p>
-        I am a software engineer who writes a lot of <span class="text-andes">JavaScript</span>
+        I am a software engineer who writes a lot of <span class="text-andes">JavaScript</span> and <span class="text-andes">Clojure</span>
       </p>
       <p class="mt-4">
-        I build frontend applications with <span class="text-andes">Vue.js</span>
-        <span class="block my-3"> and APIs with <span class="text-andes">Node.js</span></span>
+        I build frontend applications with <span class="text-andes">Vue</span> and <span class="text-andes">Svelte</span>
+        <span class="block my-3">
+          and APIs with <span class="text-andes">Node.js</span>, <span class="text-andes">Clojure</span> and <span class="text-andes">Laravel</span>
+        </span>
       </p>
       <p class="sm:text-right mt-12">
         But on the right team, we can build <span class="text-andes">anything</span>

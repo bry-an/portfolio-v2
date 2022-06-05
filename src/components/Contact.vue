@@ -8,12 +8,7 @@
       <hr>
     </h3>
     <p class="mb-1 mt-6">
-      Full contact information is on my <a
-        href="https://s3-us-west-2.amazonaws.com/bryanyunis.com/resume/bryan-yunis-resume.pdf"
-        class="text-andes"
-        target="_blank"
-        style="text-decoration:underline;"
-      >resume</a> or find me on <a
+      To contact me, please find me on <a
         href="https://s3-us-west-2.amazonaws.com/bryanyunis.com/resume/bryan-yunis-resume.pdf"
         class="text-andes"
         style="text-decoration:underline;"
